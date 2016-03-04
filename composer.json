@@ -1,0 +1,11 @@
+{
+  "require": {
+    "php": "~7.0.0",
+    "ext-redis": "*",
+    "ext-mbstring": "*",
+    "ext-newrelic": "*"
+  },
+  "provide": {
+    "ext-newrelic": "*"
+  }
+}
