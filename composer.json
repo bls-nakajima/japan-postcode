@@ -1,11 +1,48 @@
 {
+  "repositories": [
+    { "type": "vcs", "url": "https://github.com/fuel/docs" },
+    { "type": "vcs", "url": "https://github.com/fuel/core" },
+    { "type": "vcs", "url": "https://github.com/fuel/auth" },
+    { "type": "vcs", "url": "https://github.com/fuel/email" },
+    { "type": "vcs", "url": "https://github.com/fuel/oil" },
+    { "type": "vcs", "url": "https://github.com/fuel/orm" },
+    { "type": "vcs", "url": "https://github.com/fuel/parser" }
+  ],
   "require": {
     "php": "~5.6.0",
+    "fuel/core": "dev-1.8/develop",
+    "fuel/auth": "dev-1.8/develop",
+    "fuel/email": "dev-1.8/develop",
+    "fuel/oil": "dev-1.8/develop",
+    "fuel/orm": "dev-1.8/develop",
+    "fuel/parser": "dev-1.8/develop",
+    "fuelphp/upload": "2.0.1",
+    "phpunit/phpunit": "3.7.*",
+    "monolog/monolog": "1.5.*",
     "ext-redis": "*",
     "ext-mbstring": "*",
     "ext-newrelic": "*"
   },
   "provide": {
     "ext-newrelic": "*"
+  },
+  "config": {
+    "bin-dir": "fuel/vendor/bin",
+    "vendor-dir": "fuel/vendor"
+  },
+  "extra": {
+    "installer-paths": {
+      "fuel/{$name}": [
+        "fuel/core"
+      ],
+      "{$name}": [
+        "fuel/docs"
+      ]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php oil r install"
+    ]
   }
 }
