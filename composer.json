@@ -9,7 +9,7 @@
     { "type": "vcs", "url": "https://github.com/fuel/parser" }
   ],
   "require": {
-    "php": "~7.0.0",
+    "php": "~5.6.0",
     "fuel/core": "dev-1.7/master",
     "fuel/auth": "dev-1.7/master",
     "fuel/email": "dev-1.7/master",
