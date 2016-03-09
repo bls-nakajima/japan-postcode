@@ -1,9 +1,9 @@
 <?php
 
-class Controller_Index extends \Fuel\Core\Controller_Rest {
+namespace Controller;
+
+class Index extends \Fuel\Core\Controller_Rest {
     public function action_index() {
         return $this->response(array("test"));
     }
-
-
 }
